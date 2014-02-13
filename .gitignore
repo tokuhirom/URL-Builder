@@ -24,4 +24,8 @@ cover_db/
 
 MYMETA.*
 
-/URI-Builder-*
+/URL-Builder-*
+/.build
+/_build_params
+!Build/
+!META.json

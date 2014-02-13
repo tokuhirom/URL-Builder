@@ -2,7 +2,7 @@ use strict;
 use Test::More;
 
 use_ok $_ for qw(
-    URI::Builder
+    URL::Builder
 );
 
 done_testing;

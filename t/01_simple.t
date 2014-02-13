@@ -2,7 +2,7 @@ use strict;
 use warnings;
 use utf8;
 use Test::More;
-use URI::Builder;
+use URL::Builder;
 use Tie::IxHash;
 
 my @CASES = (
@@ -40,7 +40,7 @@ my @CASES = (
 );
 
 while (my ($k, $v) = splice @CASES, 0, 2) {
-    is build_uri(%$k), $v;
+    is build_url(%$k), $v;
 }
 
 done_testing;

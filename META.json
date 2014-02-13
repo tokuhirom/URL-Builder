@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
    },
-   "name" : "URI-Builder",
+   "name" : "URL-Builder",
    "no_index" : {
       "directory" : [
          "t",
@@ -57,13 +57,13 @@
    "release_status" : "unstable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/tokuhirom/URI-Builder/issues"
+         "web" : "https://github.com/tokuhirom/URL-Builder/issues"
       },
-      "homepage" : "https://github.com/tokuhirom/URI-Builder",
+      "homepage" : "https://github.com/tokuhirom/URL-Builder",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/tokuhirom/URI-Builder.git",
-         "web" : "https://github.com/tokuhirom/URI-Builder"
+         "url" : "git://github.com/tokuhirom/URL-Builder.git",
+         "web" : "https://github.com/tokuhirom/URL-Builder"
       }
    },
    "version" : "0.01"

@@ -1,12 +1,12 @@
 # NAME
 
-URI::Builder - Tiny URL builder
+URL::Builder - Tiny URL builder
 
 # SYNOPSIS
 
-    use URI::Builder;
+    use URL::Builder;
 
-    say build_uri(
+    say build_url(
         base_uri => 'http://api.example.com/',
         path => '/v1/entries',
         query => [
@@ -17,13 +17,13 @@ URI::Builder - Tiny URL builder
 
 # DESCRIPTION
 
-URI::Builder is really simple URI string building library.
+URL::Builder is really simple URL string building library.
 
 # FUNCTIONS
 
-- build\_uri(%args)
+- build\_url(%args)
 
-    Build URI from the hash.
+    Build URL from the hash.
 
     Arguments:
 

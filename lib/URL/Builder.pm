@@ -1,4 +1,4 @@
-package URI::Builder;
+package URL::Builder;
 use 5.008005;
 use strict;
 use warnings;
@@ -9,9 +9,9 @@ use parent qw(Exporter);
 
 use URL::Encode qw(url_encode);
 
-our @EXPORT = qw(build_uri);
+our @EXPORT = qw(build_url);
 
-sub build_uri {
+sub build_url {
     my %args = @_;
 
     my $uri;
@@ -48,13 +48,13 @@ __END__
 
 =head1 NAME
 
-URI::Builder - Tiny URL builder
+URL::Builder - Tiny URL builder
 
 =head1 SYNOPSIS
 
-    use URI::Builder;
+    use URL::Builder;
 
-    say build_uri(
+    say build_url(
         base_uri => 'http://api.example.com/',
         path => '/v1/entries',
         query => [
@@ -65,15 +65,15 @@ URI::Builder - Tiny URL builder
 
 =head1 DESCRIPTION
 
-URI::Builder is really simple URI string building library.
+URL::Builder is really simple URL string building library.
 
 =head1 FUNCTIONS
 
 =over 4
 
-=item build_uri(%args)
+=item build_url(%args)
 
-Build URI from the hash.
+Build URL from the hash.
 
 Arguments:
 
