@@ -1,6 +1,6 @@
 # NAME
 
-URI::Builder - It's new $module
+URI::Builder - Tiny URL builder
 
 # SYNOPSIS
 

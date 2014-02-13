@@ -1,5 +1,5 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "Tiny URL builder",
    "author" : [
       "Tokuhiro Matsuno <tokuhirom@gmail.com>"
    ],

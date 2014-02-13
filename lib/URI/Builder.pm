@@ -48,7 +48,7 @@ __END__
 
 =head1 NAME
 
-URI::Builder - It's new $module
+URI::Builder - Tiny URL builder
 
 =head1 SYNOPSIS
 
