@@ -54,9 +54,40 @@ URI::Builder - It's new $module
 
     use URI::Builder;
 
+    say build_uri(
+        base_uri => 'http://api.example.com/',
+        path => '/v1/entries',
+        query => [
+            id => 3
+        ]
+    );
+    # http://api.example.com/v1/entries?id=3
+
 =head1 DESCRIPTION
 
-URI::Builder is ...
+URI::Builder is really simple URI string building library.
+
+=head1 FUNCTIONS
+
+=over 4
+
+=item build_uri(%args)
+
+Build URI from the hash.
+
+Arguments:
+
+=over 4
+
+=item base_uri: Str
+
+=item path: Str
+
+=item query: ArrayRef[Str]|HashRef[Str]
+
+=back
+
+=back
 
 =head1 LICENSE
 
