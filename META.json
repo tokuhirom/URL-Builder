@@ -43,15 +43,28 @@
       },
       "runtime" : {
          "requires" : {
+            "URL::Encode" : "0",
             "perl" : "5.008005"
          }
       },
       "test" : {
          "requires" : {
-            "Test::More" : "0.98"
+            "Test::More" : "0.98",
+            "Tie::IxHash" : "0"
          }
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/tokuhirom/URI-Builder/issues"
+      },
+      "homepage" : "https://github.com/tokuhirom/URI-Builder",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/tokuhirom/URI-Builder.git",
+         "web" : "https://github.com/tokuhirom/URI-Builder"
+      }
+   },
    "version" : "0.01"
 }
