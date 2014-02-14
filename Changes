@@ -2,6 +2,10 @@ Revision history for Perl extension URL-Builder
 
 {{$NEXT}}
 
+0.03 2014-02-14T00:31:20Z
+
+    - Support multi-byte chars.
+
 0.02 2014-02-13T03:39:52Z
 
     - CPAN release.
