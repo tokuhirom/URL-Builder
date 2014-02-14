@@ -7,7 +7,7 @@ our $VERSION = "0.02";
 
 use parent qw(Exporter);
 
-use URL::Encode qw(url_encode);
+use URL::Encode qw(url_encode_utf8);
 
 our @EXPORT = qw(build_url);
 
@@ -26,7 +26,7 @@ sub build_url {
     if (ref $query eq 'HASH') {
         $uri .= '?';
         while (my ($k, $v) = each %$query) {
-            $uri .= $k . '=' . url_encode($v);
+            $uri .= $k . '=' . url_encode_utf8($v);
             $uri .= '&';
         }
         $uri =~ s!&\z!!;
@@ -34,7 +34,7 @@ sub build_url {
         $uri .= '?';
         my @query = @$query;
         while (@query) {
-            $uri .= shift(@query) . '=' . url_encode(shift(@query));
+            $uri .= shift(@query) . '=' . url_encode_utf8(shift(@query));
             $uri .= '&' if @query;
         }
     }
