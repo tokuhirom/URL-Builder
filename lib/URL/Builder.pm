@@ -7,7 +7,7 @@ our $VERSION = "0.03";
 
 use parent qw(Exporter);
 
-use URL::Encode qw(url_encode_utf8);
+use WWW::Form::UrlEncoded qw(build_urlencoded);
 
 our @EXPORT = qw(build_url);
 
@@ -22,21 +22,8 @@ sub build_url {
 
     $uri .= $args{path};
 
-    my $query = $args{query};
-    if (ref $query eq 'HASH') {
-        $uri .= '?';
-        while (my ($k, $v) = each %$query) {
-            $uri .= $k . '=' . url_encode_utf8($v);
-            $uri .= '&';
-        }
-        $uri =~ s!&\z!!;
-    } elsif (ref $query eq 'ARRAY') {
-        $uri .= '?';
-        my @query = @$query;
-        while (@query) {
-            $uri .= shift(@query) . '=' . url_encode_utf8(shift(@query));
-            $uri .= '&' if @query;
-        }
+    if ( defined $args{query} ) {
+        $uri .= '?' . build_urlencoded($args{query});
     }
     return $uri;
 }
