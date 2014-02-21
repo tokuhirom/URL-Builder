@@ -7,7 +7,7 @@ our $VERSION = "0.04";
 
 use parent qw(Exporter);
 
-use WWW::Form::UrlEncoded qw(build_urlencoded);
+use WWW::Form::UrlEncoded qw(build_urlencoded_utf8);
 
 our @EXPORT = qw(build_url);
 
@@ -23,7 +23,7 @@ sub build_url {
     $uri .= $args{path};
 
     if ( defined $args{query} ) {
-        $uri .= '?' . build_urlencoded($args{query});
+        $uri .= '?' . build_urlencoded_utf8($args{query});
     }
     return $uri;
 }
