@@ -3,7 +3,6 @@ use warnings;
 use utf8;
 use Test::More;
 use URL::Builder;
-use Tie::IxHash;
 
 my @CASES = (
     +{
@@ -50,14 +49,14 @@ my @CASES = (
 
     +{
         path => './foo/bar',
-        query => [a => "\xE5"],
-    } => './foo/bar?a=%C3%A5',
+        query => [a => "\xE5", b => "\x{263A}"],
+    } => './foo/bar?a=%C3%A5&b=%E2%98%BA',
 
 
 );
 
 while (my ($k, $v) = splice @CASES, 0, 2) {
-    is build_url(%$k), $v;
+    is build_url_utf8(%$k), $v;
 }
 
 done_testing;

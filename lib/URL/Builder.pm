@@ -7,11 +7,28 @@ our $VERSION = "0.04";
 
 use parent qw(Exporter);
 
-use WWW::Form::UrlEncoded qw(build_urlencoded_utf8);
+use WWW::Form::UrlEncoded qw(build_urlencoded_utf8 build_urlencoded);
 
-our @EXPORT = qw(build_url);
+our @EXPORT = qw(build_url build_url_utf8);
 
 sub build_url {
+    my %args = @_;
+
+    my $uri;
+    if (exists $args{base_uri}) {
+        $args{base_uri} =~ s!\/\z!!;
+        $uri = $args{base_uri};
+    }
+
+    $uri .= $args{path};
+
+    if ( defined $args{query} ) {
+        $uri .= '?' . build_urlencoded($args{query});
+    }
+    return $uri;
+}
+
+sub build_url_utf8 {
     my %args = @_;
 
     my $uri;
@@ -73,6 +90,10 @@ Arguments:
 =item query: ArrayRef[Str]|HashRef[Str]
 
 =back
+
+=item build_url_utf8(%args)
+
+Same as build_url, but this function encode decoded string as utf-8 automatically.
 
 =back
 
