@@ -43,7 +43,7 @@
       },
       "runtime" : {
          "requires" : {
-            "WWW::Form::UrlEncoded" : "0.13",
+            "WWW::Form::UrlEncoded" : "0.14",
             "perl" : "5.008005"
          }
       },
@@ -66,7 +66,7 @@
          "web" : "https://github.com/tokuhirom/URL-Builder"
       }
    },
-   "version" : "0.04",
+   "version" : "0.05",
    "x_contributors" : [
       "Masahiro Nagano <kazeburo@gmail.com>"
    ]

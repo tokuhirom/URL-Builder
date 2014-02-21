@@ -2,6 +2,12 @@ Revision history for Perl extension URL-Builder
 
 {{$NEXT}}
 
+0.05 2014-02-21T08:57:23Z
+
+    [INCOMPATIBLE CHANGES]
+    - Added build_url_utf8(). Previous version's build_url is named build_url_utf8() now.
+      build_url() no longer care about UTF-8.
+
 0.04 2014-02-19T07:15:06Z
 
     - use WWW::Form::UrlEncoded(kazeburo)

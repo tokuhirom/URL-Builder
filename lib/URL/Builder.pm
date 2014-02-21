@@ -3,7 +3,7 @@ use 5.008005;
 use strict;
 use warnings;
 
-our $VERSION = "0.04";
+our $VERSION = "0.05";
 
 use parent qw(Exporter);
 
@@ -75,7 +75,7 @@ URL::Builder is really simple URL string building library.
 
 =over 4
 
-=item build_url(%args)
+=item C<< build_url(%args) >>
 
 Build URL from the hash.
 
@@ -91,9 +91,9 @@ Arguments:
 
 =back
 
-=item build_url_utf8(%args)
+=item C<< build_url_utf8(%args) >>
 
-Same as build_url, but this function encode decoded string as utf-8 automatically.
+Same as build_url, but this function encode decoded string as UTF-8 automatically.
 
 =back
 

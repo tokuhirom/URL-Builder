@@ -21,7 +21,7 @@ URL::Builder is really simple URL string building library.
 
 # FUNCTIONS
 
-- build\_url(%args)
+- `build_url(%args)`
 
     Build URL from the hash.
 
@@ -30,6 +30,10 @@ URL::Builder is really simple URL string building library.
     - base\_uri: Str
     - path: Str
     - query: ArrayRef\[Str\]|HashRef\[Str\]
+
+- `build_url_utf8(%args)`
+
+    Same as build\_url, but this function encode decoded string as UTF-8 automatically.
 
 # LICENSE
 
