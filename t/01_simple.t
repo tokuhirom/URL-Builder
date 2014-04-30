@@ -51,7 +51,7 @@ my @CASES = (
     +{
         path => './foo/bar',
         query => [a => "\xE5"],
-    } => './foo/bar?a=%C3%A5',
+    } => './foo/bar?a=%E5',
 
 
 );
