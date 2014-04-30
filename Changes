@@ -2,6 +2,12 @@ Revision history for Perl extension URL-Builder
 
 {{$NEXT}}
 
+0.06 2014-04-30T05:34:20Z
+
+    - requires WWW::Form::UrlEncoded 0.19 and fixed test
+      https://github.com/tokuhirom/URL-Builder/pull/5
+      (kazeburo)
+
 0.05 2014-02-21T08:57:23Z
 
     [INCOMPATIBLE CHANGES]
